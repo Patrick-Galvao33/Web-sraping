@@ -4,7 +4,6 @@ import os
 import zipfile
 import tempfile
 
-# URL da página
 url = "https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos"
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
@@ -12,7 +11,6 @@ headers = {
                   "Chrome/115.0.0.0 Safari/537.36"
 }
 
-# Cria uma pasta temporária para armazenar os PDFs
 with tempfile.TemporaryDirectory() as output_folder:
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
